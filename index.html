@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css files -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styel.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Assignmnet Js-3</title>
+</head>
+
+<body>
+<div class="cont-all px-5 d-flex align-items-center flex-column">
+    <div class="title-page h-25 px-5">
+        <p class="pb-5 text-center position-relative z-2">Bookmarker</p>
+    </div>
+    <div class="cont-input w-100">
+        <p class="inputsdatatitle text-center mb-4 fs-4">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </p>
+        <!-- input Name -->
+        <label for="namebook" class="text-capitalize mb-2 fw-bold" ><i class="fa-solid fa-book"></i>  sit item</label>
+        <input class="form-control mb-4" id="namebook" type="text"  placeholder="Bookmark Name">
+        <div id="message_leart_name" class="alert alert-warning d-none" role="alert">
+            Enter at least three characters
+        </div>
+        <!-- input URL -->
+        <label for="websitein" class="text-capitalize mb-2 fw-bold"><i class="fa-solid fa-link"></i>  Site URL</label>
+        <input class="form-control mb-4" id="websitein" type="text" placeholder="Website URL">
+        <div id="messge_alert_url" class="alert alert-danger d-none" role="alert">
+            Enter URL correct
+        </div>
+
+        <button id="addBut" onclick="getvalue()" type="button" class="btn btn-outline-danger d-block mx-auto">Submit</button>
+        <button id="updBut" onclick="update_data_finish();" type="button" class="btn btn-outline-success m-auto d-none">Update Data</button>
+        <div class="contSearch">
+            <input 
+            type="text"
+            oninput="searchBook(this.value);"
+            class="form-control mt-4"
+            placeholder="Seach Your favorit Books"
+            >
+        </div>
+
+    </div>
+    <div class="cont-data mt-5 w-100">
+        <table class="table table-striped text-center">
+            <thead>
+                <tr class="bg-danger">
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- js files -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jsfile.js"></script>
+</body>
+
+</html>
